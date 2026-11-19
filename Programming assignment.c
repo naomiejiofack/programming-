@@ -52,17 +52,14 @@ int main(){
 			printf("entrez votre addresse\n");
 			scanf("%s",address);
 			//printing the meal table
-			printf("Menu(Super Combos)\n");
-			printf("Numero   Description                                                     Prix unique\n");
-			printf("  3     1 Medium 12'' Pizza + 1 Small shawarma + 1 pepsi(355ml)          $20.49\n");
-			printf("  4     1 Medium 12'' Pizza + 10 chicken wings + fries + 1 pepsi(355ml)   $21.99\n");
-			printf("  8     1 large 14'' Pizza + 1 medium shawarma + 1 pepsi(355ml)           $24.49\n");
-			printf("  9     1 large 14'' Pizza + 12 chicken wings + fries+ 1 pepsi(355ml)    $25.99\n");
-			printf("  13    1 X-large 16'' Pizza + 1 large shawarma + 1 pepsi(355ml)         $28.49\n");
-			printf("  14    1 X-large 16'' Pizza + 15 chicken wings + 1 pepsi(355ml)         $29.99\n");
-			
+			printf("\nMenu(Super Combos)\n");
+			printf("Numero   Description                                                      Prix unique\n");
+		for(i=0;i<6;i++){
+			printf("  %d    %s              %s\n",number[i],description[i],unitprice[i]);
+		}
+		
             //requesting which meals the user wants
-				printf("entrez le numero de repas(3,4,8,9,13,14)\n");
+				printf("\nentrez le numero de repas(3,4,8,9,13,14)\n");
 			scanf("%d",&mealnumber);
 				//making sure the meal number is part of the given values
 			while((mealnumber!=3)&&(mealnumber!=4)&&(mealnumber!=8)&&(mealnumber!=9)&&(mealnumber!=13)&&(mealnumber!=14)){
