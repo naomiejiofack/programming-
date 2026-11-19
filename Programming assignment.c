@@ -28,9 +28,9 @@ int main(){
 	struct tm *current;
 	//declaring and initialising the meal table as arrays so as to print it
 	int number[6]={3,4,8,9,13,14};
-	char description[6][100]={"1 moyenne Pizza 12' + 1 petite poutine + 1 pepsi(355ml)","1 moyenne Pizza 12' +10 ailes de poulet + Frites + 1 pepsi(355ml)",
-	"1 pizza large 14' + 1 moyenne poutine + 1 pepsi(355ml)","1 pizza large 14'  + 12 ailes de poulet + frites + 1 pepsi(355ml)",
-	"1 pizza X-large 16' + 1 grande poutine + 1 pepsi(355ml)","1 pizza X-large 16' + 12 ailes de poulet + 1 pepsi(355ml)"};
+	char description[6][100]={"1 moyenne Pizza 12'' + 1 petite poutine + 1 pepsi(355ml)","1 moyenne Pizza 12'' +10 ailes de poulet + Frites + 1 pepsi(355ml)",
+	"1 pizza large 14'' + 1 moyenne poutine + 1 pepsi(355ml)","1 pizza large 14''  + 12 ailes de poulet + frites + 1 pepsi(355ml)",
+	"1 pizza X-large 16'' + 1 grande poutine + 1 pepsi(355ml)","1 pizza X-large 16'' + 12 ailes de poulet + 1 pepsi(355ml)"};
 	char unitprice[6][50]={"$20.49","$21.99","$24.49","$25.99","$28.49","$29.99"};
 	//Displaying welcome message and service summary
 	printf("  -----------------------------------------\n");
@@ -51,6 +51,16 @@ int main(){
 			//requesting and reading address
 			printf("entrez votre addresse\n");
 			scanf("%s",address);
+			//printing the meal table
+			printf("Menu(Super Combos)\n");
+			printf("Numero   Description                                                     Prix unique\n");
+			printf("  3     1 Medium 12'' Pizza + 1 Small shawarma + 1 pepsi(355ml)          $20.49\n");
+			printf("  4     1 Medium 12'' Pizza + 10 chicken wings + fries + 1 pepsi(355ml)   $21.99\n");
+			printf("  8     1 large 14'' Pizza + 1 medium shawarma + 1 pepsi(355ml)           $24.49\n");
+			printf("  9     1 large 14'' Pizza + 12 chicken wings + fries+ 1 pepsi(355ml)    $25.99\n");
+			printf("  13    1 X-large 16'' Pizza + 1 large shawarma + 1 pepsi(355ml)         $28.49\n");
+			printf("  14    1 X-large 16'' Pizza + 15 chicken wings + 1 pepsi(355ml)         $29.99\n");
+			
             //requesting which meals the user wants
 				printf("entrez le numero de repas(3,4,8,9,13,14)\n");
 			scanf("%d",&mealnumber);
